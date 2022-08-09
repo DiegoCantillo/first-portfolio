@@ -5,6 +5,9 @@
   --title: 150px;
   --subTitle: 50px;
   --subsection: 45px;
+  --titleMobil: 40px;
+  --suutitleMobil: 25px;
+  --subseccionMobil: 18px;
 }
 
 *, *::before, *:after{
@@ -22,6 +25,8 @@ body {
   color: var(--withe);
   font-size: 18px;
 }
+
+
 
 .nav-bg li{
   width: 100%;
@@ -43,6 +48,10 @@ nav{
   display: flex;
   justify-content: end;
   padding: 25px 0 50px  0px;
+}
+
+header img {
+  display: none;
 }
 
 nav a{
@@ -74,7 +83,7 @@ img{
   font-weight: 200;
 }
 
-.icons-figure{
+.icons-social-figure{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,11 +182,12 @@ img{
 }
 
 .group-contac{
-  width: 25%;
+  width: 40%;
   display: grid;
   grid-template-columns: repeat(2 ,1fr);
   font-size: 8px;
   margin: auto;
+  padding-top: 25px;
   
 }
 
@@ -197,4 +207,106 @@ footer {
   text-align: center;
   margin: 35px 0 20px 0;
   color: var(--gray);
+}
+
+@media(max-width: 768px){
+  body{
+    font-size: 18px;
+    line-height: 22px;;
+  }
+
+  header img {
+    position: absolute;
+    filter: invert(1);
+    display: block;
+    right: 0;
+    margin: 0;
+    top: 0;
+    padding: 15px 45px;
+    width: 3%;    
+  }
+  .nav-bg{
+    display: none;
+  }
+
+  .profile{
+    width: 25%;
+    padding-top: 45px
+  }
+
+  .container-titles-main h2{
+    font-size: 21px;
+  }
+
+  .container-titles-main h1 {
+    line-height: 45px;
+    font-weight: 500;
+    font-size: 35px;
+  }
+
+  .icons-social-figure{
+    width: 25%; 
+    gap: 2px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .icons-social-figure svg{
+    width: 100%;
+    height: 30px;
+  }
+
+  .about-me p{
+    font-size: 13px;
+  }
+
+  .my-group-icons{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .icons-my-skills{
+    padding: 15px;
+  }
+  
+  .experience h4{
+    font-size: 13px;
+  }
+
+  .experience span{
+    font-size: 14px;
+  }
+
+  .experience p {
+    font-size: 15px;
+  }
+
+  .portafolio-h2{
+    width: 80%;   
+    display: flex;
+    text-align: left;
+  }
+  .img-portafolio {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: auto;
+  }
+
+  .contacto h2{
+    text-align: left;
+    padding-bottom: 30px;
+  }
+
+  .group-contac{
+    display: grid;
+    grid-row: inherit;
+    width: 100%;
+  }
+ 
+
+  .group-contac p{
+    font-size: 10px;
+  }
 }
